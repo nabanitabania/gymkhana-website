@@ -114,9 +114,7 @@ body
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
-	background: #c31432;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
 
 }
 div
@@ -881,13 +879,17 @@ section
 
 body {
     margin: 0;
-    padding: 0;
+	padding: 0;
+	background: #c94b4b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 
 .diamond-grid {
     width: 90%;
-    margin: 200px auto ;
+    margin: 100px auto ;
     
 }
 
@@ -951,10 +953,53 @@ body {
 	justify-content: center;
 	margin: 40px auto;
 	line-height: 1.3rem;
-	color: #1a1a1a;
+	color: #eaebd8;
 	padding: 40px 40px;
-	background: #f4b0c7;
+	display: none;
+
 }
+
+.photo {
+	border-radius: 6px;
+}
+
+.head {
+	height: 150px;
+	width: 100%;
+	color: rgb(240, 232, 232);
+	padding-top: 30px;
+	font-size: 60px;
+	margin-top: 180px;
+	justify-content: center;
+	text-align: center;
+}
+
+
+.content:target{
+
+	display:block !important;
+	position: relative;
+	
+}
+
+.header {
+	z-index: 100;
+  }
+  
+  :target {
+	 position: relative;
+	 border-top: 200px solid transparent;
+	 margin: -200px 0 40px;
+	 background-clip: padding-box;
+  }
+  
+  :target::before {
+	 content: "";
+	 position: absolute;
+	 top: -2px;
+	 left: 0;
+	 right: 0;
+  }
 
 .content h1 {
 	font-weight: bold;
@@ -962,10 +1007,27 @@ body {
 	display: inline;
 }
 
+.content .user {
+	align-items: center;
+	justify-content: center;
+	margin: auto 50px;
+}
 .content .user img {
-	margin-left: 10px;
-	height: 60px;
-	width: 60px;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 10px;
+	height: 40px;
+	width: 40px;
+}
+.photo {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.photo:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 	
 }
 
@@ -984,6 +1046,12 @@ body {
     .diamond-grid {
         width: 100%;
         margin: 150px auto;
-    }
+	}
+	
+	.col-12 {
+		width: 100%;
+	}
 }
+
+
 

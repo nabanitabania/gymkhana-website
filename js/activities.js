@@ -1,19 +1,24 @@
 $(document).ready(function(){
-    $("#left").click(function(){
+
+    $("#so-cult").hide();
+    $("#technology").hide();
+     
+
+    $("#div1").click(function(){
         $("#so-cult").hide();
        $("#technology").hide();
         $("#sports").show();
        
     });
 
-    $("#middle").click(function(){
+    $("#div2").click(function(){
         $("#technology").hide();
         $("#sports").hide();
        $("#so-cult").show();
       
     });
 
-    $("#right").click(function(){
+    $("#div3").click(function(){
         $("#technology").show();
         $("#sports").hide();
        $("#so-cult").hide();
